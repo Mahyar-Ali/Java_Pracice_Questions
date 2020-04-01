@@ -1,0 +1,51 @@
+Code:-
+package com.company;
+import java.util.Date;
+
+
+
+public class Main{
+    public static void main(String args[]){
+        Author author = new Author();
+        Book book1 = new Book("3B1B",author,20,30);
+        System.out.println(book1.getName()+book1.getAuthor());
+        book1=null;
+        System.out.println("After deleting the owning object the owned object still remains.");
+        System.out.println("It is an example of Aggregation"+author);
+        }
+    }
+
+class Author{
+    private String name;
+    private String email;
+    private char gender;
+}
+
+class Book{
+    private String name ;
+    private double price ;
+    private Author author ;
+    private int qtyinstock ;
+
+    public Book(){}
+    public Book(String name, Author author, double price){
+        this.author = author;
+        this.name = name;
+        this.price =price;
+    }
+    public Book(String name, Author author, double price, int qtyinstock ){
+        this.author = author;
+        this.name = name;
+        this.price =price;
+        this.qtyinstock = qtyinstock;
+    }
+
+    public  String getName(){return  name;}
+    public Author getAuthor (){return author;}
+    public double getPrice (){return price;}
+    public int getQtyinstock(){return  qtyinstock;}
+
+    public void setPrice(double price){this.price=price;}
+    public void setQtyinstock(int qtyinstock){this.qtyinstock=qtyinstock;}
+}
+
