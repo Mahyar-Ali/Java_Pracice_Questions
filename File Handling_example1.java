@@ -53,9 +53,7 @@ class StudentsData {
         reader.close();
     }
     public void listStudents(){
-        /*It is very unclear in the question that whether I should print everything
-        * or just the names of students.But as it is mentioned "list of students"*/
-        //So I will print name of students
+        //It will print name of students
         System.out.println("Name of Students are :-");
         for (int i=1;i<=N;i++){
             System.out.println(f_name[i-1]+" "+l_name[i-1]);
